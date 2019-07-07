@@ -39,7 +39,20 @@
 
 
 <script type="text/javascript">
+const container= $('.shape-container');
+const stop = $('.btn');
+var intervalHandle;
 
+  function addCircle(){
+    console.log("inside of add circle");
+    container.append('<div class="p2-circle bg-blue"></div>');
+  }
+  var intervalHandle = setInterval(addCircle, 1000);
+  $('.btn').click(function(){
+    clearInterval(intervalHandle);
+  });
+  
+  
 	// your solution here
 
 </script>
